@@ -23,7 +23,7 @@ export class App extends Component {
       localStorage.setItem('contacts', stringifiedContacts);
     }
     const checkLocal = JSON.parse(localStorage.getItem('contacts'));
-    if(!(checkLocal?.length>0)){
+    if(checkLocal?.length<=0){
       localStorage.removeItem('contacts');
     }    
   }
